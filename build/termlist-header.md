@@ -10,7 +10,7 @@ Preferred namespace abbreviation
 : chrono:
 
 Date version issued
-: 2021-04-27
+: 2025-06-12
 
 Date created
 : 2021-04-27
@@ -19,10 +19,13 @@ Part of TDWG Standard
 : <http://www.tdwg.org/standards/450>
 
 This version
-: <http://rs.tdwg.org/dwc/doc/chrono/2021-04-27>
+: <http://rs.tdwg.org/dwc/doc/chrono/2025-06-12>
 
 Latest version
 : <http://rs.tdwg.org/dwc/doc/chrono/>
+
+Previous version
+: <http://rs.tdwg.org/dwc/doc/chrono/2021-04-27>
 
 Abstract
 : The Chronometric Age Vocabulary is a standard for transmitting information about chronometric ages - the processes and results of an assay or other analysis used to determine the age of a MaterialSample. This document lists all terms in namespaces currently used in the vocabulary.
@@ -34,12 +37,12 @@ Creator
 : TDWG Darwin Core Chronometric Age Extension Task Group
 
 Bibliographic citation
-: TDWG Darwin Core Chronometric Age Extension Task Group. 2021. Chronometric Age Vocabulary. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/dwc/doc/chrono/2021-04-27>
+: TDWG Darwin Core Chronometric Age Extension Task Group. 2025. Chronometric Age Vocabulary. Biodiversity Information Standards (TDWG). <http://rs.tdwg.org/dwc/doc/chrono/2025-06-12>
 
 
 ## 1 Introduction
 
-This document contains all versions of terms in the Chronometric Age vocabulary (<http://rs.tdwg.org/version/chrono/2021-02-21>). The vocabulary uses the namespace abbreviation `chrono:`. Earlier term versions using the `zooarchnet:` namespace are deprecated and should no longer be used. These deprecated terms can be found at <http://rs.tdwg.org/chrono/zooarchnet/>.
+This document contains all versions of terms in the Chronometric Age vocabulary (<http://rs.tdwg.org/version/chrono/2025-06-12>). The vocabulary uses the namespace abbreviation `chrono:`. Earlier term versions using the `zooarchnet:` namespace are deprecated and should no longer be used. These deprecated terms can be found at <http://rs.tdwg.org/chrono/zooarchnet/>.
 
 For a simplified list that contains only the currently recommended terms, see the Chronometric Age Quick Reference Guide (<https://tdwg.github.io/chrono/terms/>).
 

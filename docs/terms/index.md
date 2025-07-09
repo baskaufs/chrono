@@ -45,7 +45,7 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeID</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/chronometricAgeID">http://rs.tdwg.org/chrono/terms/chronometricAgeID</a></td></tr>
-    <tr><td>Definition</td><td>An identifier for the set of information associated with a ChronometricAge.</td></tr>
+    <tr><td>Definition</td><td>An identifier for the set of information associated with a chrono:ChronometricAge.</td></tr>
     <tr><td>Comments</td><td>May be a global unique identifier or an identifier specific to the dataset. This can be used to link this record to another repository where more information about the dataset is shared.</td></tr>
     <tr><td>Examples</td><td><code><a href="https://www.canadianarchaeology.ca/samples/70673">https://www.canadianarchaeology.ca/samples/70673</a></code></td></tr>
   </tbody>
@@ -71,9 +71,9 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeProtocol</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol">http://rs.tdwg.org/chrono/terms/chronometricAgeProtocol</a></td></tr>
-    <tr><td>Definition</td><td>A description of or reference to the methods used to determine the chronometric age.</td></tr>
-    <tr><td>Comments</td><td></td></tr>
-    <tr><td>Examples</td><td><code>radiocarbon AMS</code>, <code>K-Ar dates for the lower most marker tuff</code>, <code>historic documentation</code>, <code>ceramic seriation</code></td></tr>
+    <tr><td>Definition</td><td>A description of or reference to the methods used to determine the chrono:ChronometricAge.</td></tr>
+    <tr><td>Comments</td><td> This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value.</td></tr>
+    <tr><td>Examples</td><td><code>radiocarbon AMS</code>; <code>K-Ar dates for the lower most marker tuff</code>; <code>historic documentation</code>; <code>ceramic seriation</code></td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -97,9 +97,9 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeConversionProtocol</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol">http://rs.tdwg.org/chrono/terms/chronometricAgeConversionProtocol</a></td></tr>
-    <tr><td>Definition</td><td>The method used for converting the uncalibratedChronometricAge into a chronometric age in years, as captured in the earliestChronometricAge, earliestChronometricAgeReferenceSystem, latestChronometricAge, and latestChronometricAgeReferenceSystem fields.</td></tr>
-    <tr><td>Comments</td><td>For example, calibration of conventional radiocarbon age or the currently accepted age range of a cultural or geological period.</td></tr>
-    <tr><td>Examples</td><td><code>INTCAL13</code>, <code>sequential 6 phase Bayesian model and IntCal13 calibration</code></td></tr>
+    <tr><td>Definition</td><td>The method used for converting the chrono:uncalibratedChronometricAge into a chronometric age in years, as captured in the chrono:earliestChronometricAge, chrono:earliestChronometricAgeReferenceSystem, chrono:latestChronometricAge, and chrono:latestChronometricAgeReferenceSystem fields.</td></tr>
+    <tr><td>Comments</td><td>For example, calibration of conventional radiocarbon age or the currently accepted age range of a cultural or geological period. This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value.</td></tr>
+    <tr><td>Examples</td><td><code>INTCAL13</code>; <code>sequential 6 phase Bayesian model and IntCal13 calibration</code></td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -111,8 +111,8 @@ This document is intended to be an easy-to-read reference the currently recommen
     <tr class="table-secondary"><th colspan="2">earliestChronometricAge</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/earliestChronometricAge">http://rs.tdwg.org/chrono/terms/earliestChronometricAge</a></td></tr>
     <tr><td>Definition</td><td>The maximum/earliest/oldest possible age of a specimen as determined by a dating method.</td></tr>
-    <tr><td>Comments</td><td>The expected unit for this field is years. This field, if populated, must have an associated earliestChronometricAgeReferenceSystem.</td></tr>
-    <tr><td>Examples</td><td>100</td></tr>
+    <tr><td>Comments</td><td>The expected unit for this field is years. This field, if populated, must have an associated chrono:earliestChronometricAgeReferenceSystem.</td></tr>
+    <tr><td>Examples</td><td><code>100</code></td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -123,9 +123,9 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">earliestChronometricAgeReferenceSystem</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem">http://rs.tdwg.org/chrono/terms/earliestChronometricAgeReferenceSystem</a></td></tr>
-    <tr><td>Definition</td><td>The reference system associated with the earliestChronometricAge.</td></tr>
-    <tr><td>Comments</td><td>Recommended best practice is to use a controlled vocabulary.</td></tr>
-    <tr><td>Examples</td><td><code>kya</code>,<code>mya</code>,<code>BP</code>,<code>AD</code>,<code>BCE</code>,<code>ka</code>,<code>Ma</code>,<code>Ga</code></td></tr>
+    <tr><td>Definition</td><td>The reference system associated with the chrono:earliestChronometricAge.</td></tr>
+    <tr><td>Comments</td><td>Recommended best practice is to use a controlled vocabulary. This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value.</td></tr>
+    <tr><td>Examples</td><td><code>kya</code>; <code>mya</code>; <code>BP</code>; <code>AD</code>; <code>BCE</code>; <code>ka</code>; <code>Ma</code>; <code>Ga</code></td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -137,8 +137,8 @@ This document is intended to be an easy-to-read reference the currently recommen
     <tr class="table-secondary"><th colspan="2">latestChronometricAge</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/latestChronometricAge">http://rs.tdwg.org/chrono/terms/latestChronometricAge</a></td></tr>
     <tr><td>Definition</td><td>The minimum/latest/youngest possible age of a specimen as determined by a dating method.</td></tr>
-    <tr><td>Comments</td><td>The expected unit for this field is years. This field, if populated, must have an associated latestChronometricAgeReferenceSystem.</td></tr>
-    <tr><td>Examples</td><td>27</td></tr>
+    <tr><td>Comments</td><td>The expected unit for this field is years. This field, if populated, must have an associated chrono:latestChronometricAgeReferenceSystem.</td></tr>
+    <tr><td>Examples</td><td><code>27</code></td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -149,9 +149,9 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">latestChronometricAgeReferenceSystem</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem">http://rs.tdwg.org/chrono/terms/latestChronometricAgeReferenceSystem</a></td></tr>
-    <tr><td>Definition</td><td>The reference system associated with the latestChronometricAge.</td></tr>
-    <tr><td>Comments</td><td>Recommended best practice is to use a controlled vocabulary.</td></tr>
-    <tr><td>Examples</td><td><code>kya</code>,<code>mya</code>,<code>BP</code>,<code>AD</code>,<code>BCE</code>,<code>ka</code>,<code>Ma</code>,<code>Ga</code></td></tr>
+    <tr><td>Definition</td><td>The reference system associated with the chrono:latestChronometricAge.</td></tr>
+    <tr><td>Comments</td><td>Recommended best practice is to use a controlled vocabulary. This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value.</td></tr>
+    <tr><td>Examples</td><td><code>kya</code>; <code>mya</code>; <code>BP</code>; <code>AD</code>; <code>BCE</code>; <code>ka</code>; <code>Ma</code>; <code>Ga</code></td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -162,8 +162,8 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeUncertaintyInYears</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears">http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyInYears</a></td></tr>
-    <tr><td>Definition</td><td>The temporal uncertainty of the earliestChronometricAge and latestChronometicAge in years.</td></tr>
-    <tr><td>Comments</td><td>The expected unit for this field is years. The value in this field is number of years before and after the values given in the earliest and latest chronometric age fields within which the actual values are estimated to be.</td></tr>
+    <tr><td>Definition</td><td>The temporal uncertainty of the chrono:earliestChronometricAge and chrono:latestChronometicAge in years.</td></tr>
+    <tr><td>Comments</td><td>The expected unit for this field is years. The value in this field is number of years before and after the values given in the chrono:earliestChronometricAge and chrono:latestChronometricAge fields within which the actual values are estimated to be.</td></tr>
     <tr><td>Examples</td><td><code>100</code></td></tr>
   </tbody>
 </table>
@@ -175,9 +175,9 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeUncertaintyMethod</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod">http://rs.tdwg.org/chrono/terms/chronometricAgeUncertaintyMethod</a></td></tr>
-    <tr><td>Definition</td><td>The method used to generate the value of chronometricAgeUncertaintyInYears.</td></tr>
-    <tr><td>Comments</td><td></td></tr>
-    <tr><td>Examples</td><td><code>2-sigma calibrated range</code>, <code>Half of 95% confidence interval</code></td></tr>
+    <tr><td>Definition</td><td>The method used to generate the value of chrono:chronometricAgeUncertaintyInYears.</td></tr>
+    <tr><td>Comments</td><td> This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value.</td></tr>
+    <tr><td>Examples</td><td><code>2-sigma calibrated range</code>; <code>Half of 95% confidence interval</code></td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -188,9 +188,9 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">materialDated</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/materialDated">http://rs.tdwg.org/chrono/terms/materialDated</a></td></tr>
-    <tr><td>Definition</td><td>A description of the material on which the chronometricAgeProtocol was actually performed, if known.</td></tr>
-    <tr><td>Comments</td><td></td></tr>
-    <tr><td>Examples</td><td><code>Double Tuff</code>, <code>Charcoal found in Stratum V</code>, <code>charred wood</code>, <code>tooth</code></td></tr>
+    <tr><td>Definition</td><td>A description of the material on which the chrono:chronometricAgeProtocol was actually performed, if known.</td></tr>
+    <tr><td>Comments</td><td> This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value.</td></tr>
+    <tr><td>Examples</td><td><code>Double Tuff</code>; <code>Charcoal found in Stratum V</code>; <code>charred wood</code>; <code>tooth</code></td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -201,9 +201,9 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">materialDatedID</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/materialDatedID">http://rs.tdwg.org/chrono/terms/materialDatedID</a></td></tr>
-    <tr><td>Definition</td><td>An identifier for the MaterialSample on which the chronometricAgeProtocol was performed, if applicable.</td></tr>
+    <tr><td>Definition</td><td>An identifier for the dwc:MaterialEntity on which the chrono:chronometricAgeProtocol was performed, if applicable.</td></tr>
     <tr><td>Comments</td><td></td></tr>
-    <tr><td>Examples</td><td><code>dwc:materialSampleID: <a href="https://www.ebi.ac.uk/metagenomics/samples/SRS1930158">https://www.ebi.ac.uk/metagenomics/samples/SRS1930158</a></code></td></tr>
+    <tr><td>Examples</td><td><code>dwc:materialEntityID: <a href="https://www.ebi.ac.uk/metagenomics/samples/SRS1930158">https://www.ebi.ac.uk/metagenomics/samples/SRS1930158</a></code></td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -214,9 +214,9 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">materialDatedRelationship</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/materialDatedRelationship">http://rs.tdwg.org/chrono/terms/materialDatedRelationship</a></td></tr>
-    <tr><td>Definition</td><td>The relationship of the materialDated to the subject of the ChronometricAge record, from which the ChronometricAge of the subject is inferred.</td></tr>
+    <tr><td>Definition</td><td>The relationship of the chrono:materialDated to the subject of the chrono:ChronometricAge record, from which the chrono:ChronometricAge of the subject is inferred.</td></tr>
     <tr><td>Comments</td><td>Recommended best practice is to use a controlled vocabulary.</td></tr>
-    <tr><td>Examples</td><td><code>sameAs</code> (cases where the subject material was completely destructively subsampled to get the ChronometricAge), <code>subsampleOf</code> (cases where part of the original specimen was extracted as the material used to determine the ChronometricAge), <code>inContextWith</code> (cases where the ChronometricAge is inferred from materialDated, such as sediments or cultural objects, in related temporal context),<code>stratigraphicallyCorrelatedWith</code> (cases where the ChronometricAge is inferred from materialDated in a stratigraphically correlated context)</td></tr>
+    <tr><td>Examples</td><td><code>sameAs</code> (cases where the subject material was completely destructively subsampled to get the ChronometricAge); <code>subsampleOf</code> (cases where part of the original specimen was extracted as the material used to determine the ChronometricAge); <code>inContextWith</code> (cases where the ChronometricAge is inferred from materialDated, such as sediments or cultural objects, in related temporal context); <code>stratigraphicallyCorrelatedWith</code> (cases where the ChronometricAge is inferred from materialDated in a stratigraphically correlated context)</td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -227,8 +227,8 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeDeterminedBy</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy">http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedBy</a></td></tr>
-    <tr><td>Definition</td><td>A list (concatenated and separated) of names of people, groups, or organizations who determined the ChronometricAge.</td></tr>
-    <tr><td>Comments</td><td>Recommended best practice is to separate the values in a list with space vertical bar space ( | ).</td></tr>
+    <tr><td>Definition</td><td>A list (concatenated and separated) of names of people, groups, or organizations who determined the chrono:ChronometricAge.</td></tr>
+    <tr><td>Comments</td><td>Recommended best practice is to separate the values in a list with space vertical bar space ( | ). This term has an equivalent in the chronoiri: namespace that allows only an IRI as a value, whereas this term allows for any string literal value.</td></tr>
     <tr><td>Examples</td><td><code>Michelle LeFebvre | Neill Wallis</code></td></tr>
   </tbody>
 </table>
@@ -240,9 +240,9 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeDeterminedDate</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate">http://rs.tdwg.org/chrono/terms/chronometricAgeDeterminedDate</a></td></tr>
-    <tr><td>Definition</td><td>The date on which the ChronometricAge was determined.</td></tr>
+    <tr><td>Definition</td><td>The date on which the chrono:ChronometricAge was determined.</td></tr>
     <tr><td>Comments</td><td>Recommended best practice is to use a date that conforms to ISO 8601-1:2019.</td></tr>
-    <tr><td>Examples</td><td><code>1963-03-08T14:07-0600</code> (8 Mar 1963 at 2:07pm in the time zone six hours earlier than UTC). <code>2009-02-20T08:40Z</code> (20 February 2009 8:40am UTC). <code>2018-08-29T15:19</code> (3:19pm local time on 29 August 2018). <code>1809-02-12</code> (some time during 12 February 1809). <code>1906-06</code> (some time in June 1906). <code>1971</code> (some time in the year 1971).</td></tr>
+    <tr><td>Examples</td><td><code>1963-03-08T14:07-0600</code> (8 Mar 1963 at 2:07pm in the time zone six hours earlier than UTC); <code>2009-02-20T08:40Z</code> (20 February 2009 8:40am UTC); <code>2018-08-29T15:19</code> (3:19pm local time on 29 August 2018); <code>1809-02-12</code> (some time during 12 February 1809); <code>1906-06</code> (some time in June 1906); <code>1971</code> (some time in the year 1971)</td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -253,9 +253,9 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeReferences</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/chronometricAgeReferences">http://rs.tdwg.org/chrono/terms/chronometricAgeReferences</a></td></tr>
-    <tr><td>Definition</td><td>A list (concatenated and separated) of identifiers (publication, bibliographic reference, global unique identifier, URI) of literature associated with the ChronometricAge.</td></tr>
+    <tr><td>Definition</td><td>A list (concatenated and separated) of identifiers (publication, bibliographic reference, global unique identifier, URI) of literature associated with the chrono:ChronometricAge.</td></tr>
     <tr><td>Comments</td><td>Recommended best practice is to separate the values in a list with space vertical bar space ( | ).</td></tr>
-    <tr><td>Examples</td><td><code>Pluckhahn, Thomas J., Neill J. Wallis, and Victor D. Thompson. 2020  The History and Future of Migrationist Explanation in the Archaeology of the Eastern Woodlands: A Review and Case Study of the Woodland Period Gulf Coast. Journal of Archaeological Research. <a href="https://doi.org/10.1007/s10814-019-09140-x">https://doi.org/10.1007/s10814-019-09140-x</a></code></td></tr>
+    <tr><td>Examples</td><td><code>Pluckhahn, Thomas J., Neill J. Wallis, and Victor D. Thompson. 2020 The History and Future of Migrationist Explanation in the Archaeology of the Eastern Woodlands: A Review and Case Study of the Woodland Period Gulf Coast. Journal of Archaeological Research. <a href="https://doi.org/10.1007/s10814-019-09140-x">https://doi.org/10.1007/s10814-019-09140-x</a></code></td></tr>
   </tbody>
 </table>
 <p class="invisible">
@@ -266,7 +266,7 @@ This document is intended to be an easy-to-read reference the currently recommen
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeRemarks</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks">http://rs.tdwg.org/chrono/terms/chronometricAgeRemarks</a></td></tr>
-    <tr><td>Definition</td><td>Notes or comments about the ChronometricAge.</td></tr>
+    <tr><td>Definition</td><td>Notes or comments about the chrono:ChronometricAge.</td></tr>
     <tr><td>Comments</td><td></td></tr>
     <tr><td>Examples</td><td><code>Beta Analytic number: 323913 | One of the Crassostrea virginica right valve specimens from North Midden Feature 17 was chosen for AMS dating, but it is unclear exactly which specimen it was.</code></td></tr>
   </tbody>
@@ -295,7 +295,7 @@ For more information on `UseWithIRI`, see [Section 2.5 of the RDF Guide](https:/
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeConversionProtocol</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/iri/chronometricAgeConversionProtocol">http://rs.tdwg.org/chrono/iri/chronometricAgeConversionProtocol</a></td></tr>
-    <tr><td>Definition</td><td>The method used to convert the uncalibratedChronometricAge into a chronometric age in years, as captured in earliestChronometricAge, earliestChronometricAgeReferenceSystem, latestChronometricAge, and latestChronometricAgeReferenceSystem.</td></tr>
+    <tr><td>Definition</td><td>The method used to convert the chrono:uncalibratedChronometricAge into a chronometric age in years, as captured in chrono:earliestChronometricAge, chrono:earliestChronometricAgeReferenceSystem, chrono:latestChronometricAge, and chrono:latestChronometricAgeReferenceSystem.</td></tr>
     <tr><td>Comments</td><td>Terms in the chronoiri namespace are intended to be used in RDF with non-literal objects.</td></tr>
     <tr><td>Examples</td><td></td></tr>
   </tbody>
@@ -308,7 +308,7 @@ For more information on `UseWithIRI`, see [Section 2.5 of the RDF Guide](https:/
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeDeterminedBy</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/iri/chronometricAgeDeterminedBy">http://rs.tdwg.org/chrono/iri/chronometricAgeDeterminedBy</a></td></tr>
-    <tr><td>Definition</td><td>A person, group, or organization that determined the ChronometricAge.</td></tr>
+    <tr><td>Definition</td><td>A person, group, or organization that determined the chrono:ChronometricAge.</td></tr>
     <tr><td>Comments</td><td>Terms in the chronoiri namespace are intended to be used in RDF with non-literal objects.</td></tr>
     <tr><td>Examples</td><td></td></tr>
   </tbody>
@@ -321,7 +321,7 @@ For more information on `UseWithIRI`, see [Section 2.5 of the RDF Guide](https:/
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeProtocol</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/iri/chronometricAgeProtocol">http://rs.tdwg.org/chrono/iri/chronometricAgeProtocol</a></td></tr>
-    <tr><td>Definition</td><td>A method used to determine the chronometric age.</td></tr>
+    <tr><td>Definition</td><td>A method used to determine the chrono:ChronometricAge.</td></tr>
     <tr><td>Comments</td><td>Terms in the chronoiri namespace are intended to be used in RDF with non-literal objects.</td></tr>
     <tr><td>Examples</td><td></td></tr>
   </tbody>
@@ -334,7 +334,7 @@ For more information on `UseWithIRI`, see [Section 2.5 of the RDF Guide](https:/
   <tbody>
     <tr class="table-secondary"><th colspan="2">chronometricAgeUncertaintyMethod</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/iri/chronometricAgeUncertaintyMethod">http://rs.tdwg.org/chrono/iri/chronometricAgeUncertaintyMethod</a></td></tr>
-    <tr><td>Definition</td><td>The method used to generate the value of chronometricAgeUncertaintyInYears.</td></tr>
+    <tr><td>Definition</td><td>The method used to generate the value of chrono:chronometricAgeUncertaintyInYears.</td></tr>
     <tr><td>Comments</td><td>Terms in the chronoiri namespace are intended to be used in RDF with non-literal objects.</td></tr>
     <tr><td>Examples</td><td></td></tr>
   </tbody>
@@ -347,7 +347,7 @@ For more information on `UseWithIRI`, see [Section 2.5 of the RDF Guide](https:/
   <tbody>
     <tr class="table-secondary"><th colspan="2">earliestChronometricAgeReferenceSystem</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/iri/earliestChronometricAgeReferenceSystem">http://rs.tdwg.org/chrono/iri/earliestChronometricAgeReferenceSystem</a></td></tr>
-    <tr><td>Definition</td><td>The reference system associated with the earliestChronometricAge.</td></tr>
+    <tr><td>Definition</td><td>The reference system associated with the chrono:earliestChronometricAge.</td></tr>
     <tr><td>Comments</td><td>Terms in the chronoiri namespace are intended to be used in RDF with non-literal objects.</td></tr>
     <tr><td>Examples</td><td></td></tr>
   </tbody>
@@ -360,7 +360,7 @@ For more information on `UseWithIRI`, see [Section 2.5 of the RDF Guide](https:/
   <tbody>
     <tr class="table-secondary"><th colspan="2">latestChronometricAgeReferenceSystem</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/iri/latestChronometricAgeReferenceSystem">http://rs.tdwg.org/chrono/iri/latestChronometricAgeReferenceSystem</a></td></tr>
-    <tr><td>Definition</td><td>The reference system associated with the latestChronometricAge.</td></tr>
+    <tr><td>Definition</td><td>The reference system associated with the chrono:latestChronometricAge.</td></tr>
     <tr><td>Comments</td><td>Terms in the chronoiri namespace are intended to be used in RDF with non-literal objects.</td></tr>
     <tr><td>Examples</td><td></td></tr>
   </tbody>
@@ -373,7 +373,7 @@ For more information on `UseWithIRI`, see [Section 2.5 of the RDF Guide](https:/
   <tbody>
     <tr class="table-secondary"><th colspan="2">materialDated</th></tr>
     <tr><td>Identifier</td><td><a href="http://rs.tdwg.org/chrono/iri/materialDated">http://rs.tdwg.org/chrono/iri/materialDated</a></td></tr>
-    <tr><td>Definition</td><td>The material on which the chronometricAgeProtocol was actually performed.</td></tr>
+    <tr><td>Definition</td><td>The material on which the chrono:chronometricAgeProtocol was actually performed.</td></tr>
     <tr><td>Comments</td><td>Terms in the chronoiri namespace are intended to be used in RDF with non-literal objects.</td></tr>
     <tr><td>Examples</td><td></td></tr>
   </tbody>

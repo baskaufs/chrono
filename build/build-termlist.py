@@ -32,10 +32,10 @@ organized_in_categories = True
 
 # If organized in categories, the display_order list must contain the IRIs that are values of tdwgutility_organizedInClass
 # If not organized into categories, the value is irrelevant. There just needs to be one item in the list.
-display_order = [ 'http://tdwg.org/chrono/terms/ChronometricAge', 'http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI']
-display_label = ['Chronometric Age', 'IRI-value terms']
-display_comments = ['','']
-display_id = ['chronometric_age', 'use_with_iri']
+display_order = [ 'http://rs.tdwg.org/chrono/terms/ChronometricAge', 'http://tdwg.org/chrono/terms/ChronometricAge', 'http://rs.tdwg.org/dwc/terms/attributes/UseWithIRI']
+display_label = ['Chronometric Age', 'Chronometric Age', 'IRI-value terms']
+display_comments = ['','','']
+display_id = ['chronometric_age', 'chronometric_age', 'use_with_iri']
 
 # ---------------
 # Function definitions
@@ -49,7 +49,7 @@ def createLinks(text):
             return '<a href="' + match.group(1)[:-1] + '">' + match.group(1)[:-1] + '</a>.'
         return '<a href="' + match.group(1) + '">' + match.group(1) + '</a>'
 
-    pattern = '(https?://[^\s,;\)"]*)'
+    pattern = r'(https?://[^\s,;\)"<]*)'
     result = re.sub(pattern, repl, text)
     return result
 
@@ -69,7 +69,7 @@ def convert_link(text_with_urls):
         url = inputstring.group()
         return "<a href=\"{}\">{}</a>".format(url, url)
 
-    regx = "(http[s]?://[\w\d:#@%/;$()~_?\+-;=\\\.&]*)(?<![\)\.,])"
+    regx = r"(http[s]?://[\w\d:#@%/;$()~_?\+-;=\\\.&]*)(?<![\)\.,])"
     return re.sub(regx, _handle_matched, text_with_urls)
 
 # Hack the code taken from the terms.tmpl template to insert the HTML necessary to make the semicolon-separated
