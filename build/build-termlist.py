@@ -238,7 +238,7 @@ for row_index,row in terms_sorted_by_localname.iterrows():
         curie = row['pref_ns_prefix'] + ":" + row['term_localName']
         curie_anchor = curie.replace(':','_')
         text += '[' + curie + '](#' + curie_anchor + ') |\n'
-text = text[:len(text)-2] # remove final trailing vertical bar and newline
+text = text[:len(text)-3] # remove final trailing space, vertical bar, and newline
 text += '\n\n' # put back removed newline
 
 for category in range(0,len(display_order)):
@@ -255,7 +255,7 @@ for category in range(0,len(display_order)):
             curie = row['pref_ns_prefix'] + ":" + row['term_localName']
             curie_anchor = curie.replace(':','_')
             text += '[' + curie + '](#' + curie_anchor + ') |\n'
-    text = text[:len(text)-2] # remove final trailing vertical bar and newline
+    text = text[:len(text)-3] # remove final trailing space, vertical bar, and newline
     text += '\n\n' # put back removed newline
 
 index_by_name = text
@@ -275,7 +275,7 @@ for row_index,row in terms_sorted_by_label.iterrows():
     if row['rdf_type'] == 'http://www.w3.org/2000/01/rdf-schema#Class':
         curie_anchor = row['pref_ns_prefix'] + "_" + row['term_localName']
         text += '[' + row['label'] + '](#' + curie_anchor + ') |\n'
-text = text[:len(text)-2] # remove final trailing vertical bar and newline
+text = text[:len(text)-3] # remove final trailing space, vertical bar, and newline
 text += '\n\n' # put back removed newline
 
 for category in range(0,len(display_order)):
@@ -292,7 +292,7 @@ for category in range(0,len(display_order)):
             if row['rdf_type'] != 'http://www.w3.org/2000/01/rdf-schema#Class':
                 curie_anchor = row['pref_ns_prefix'] + "_" + row['term_localName']
                 text += '[' + row['label'] + '](#' + curie_anchor + ') |\n'
-    text = text[:len(text)-2] # remove final trailing vertical bar and newline
+    text = text[:len(text)-3] # remove final trailing space, vertical bar, and newline
     text += '\n\n' # put back removed newline
 
 index_by_label = text
